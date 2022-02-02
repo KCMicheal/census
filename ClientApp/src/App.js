@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.css';
 import { Header } from './components/Header'
 import CreateUser from './components/CreateUser'
+import { DisplayBoard } from './components/DisplayBoard';
 import { getAllUsers, createUser } from './services/UserService'
 
 class App extends Component {
@@ -46,6 +47,13 @@ class App extends Component {
                   createUser={this.createUser}
                   >
                 </CreateUser>
+            </div>
+            <div className="col-md-4">
+                <DisplayBoard
+                  numberOfUsers={this.state.numberOfUsers}
+                  getAllUsers={this.getAllUsers}
+                >
+                </DisplayBoard>
             </div>
           </div>
         </div>
