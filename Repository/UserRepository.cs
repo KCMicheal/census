@@ -14,9 +14,9 @@ namespace census.Repository
 
         public UserRepository()
         {
-            Add(new UserModel { firstName= "first1", lastName="last1", email="email1@gmail.com"});
-            Add(new UserModel { firstName= "first2", lastName="last2", email="email2@gmail.com"});
-            Add(new UserModel { firstName= "first3", lastName="last3", email="email3@gmail.com"});
+            Add(new UserModel { FirstName= "first1", LastName="last1", Email="email1@gmail.com"});
+            Add(new UserModel { FirstName= "first2", LastName="last2", Email="email2@gmail.com"});
+            Add(new UserModel { FirstName= "first3", LastName="last3", Email="email3@gmail.com"});
         }
 
         public IEnumerable<UserModel> GetAll()
