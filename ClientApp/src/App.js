@@ -4,6 +4,7 @@ import './custom.css';
 import { Header } from './components/Header'
 import CreateUser from './components/CreateUser'
 import { DisplayBoard } from './components/DisplayBoard';
+import { Users } from './components/Users';
 import { getAllUsers, createUser } from './services/UserService'
 
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <div className="container mrgnbtm">
+        <div className="container mr gn btm">
           <div className="row">
             <div className="col-md-8">
                 <CreateUser
@@ -56,6 +57,9 @@ class App extends Component {
                 </DisplayBoard>
             </div>
           </div>
+        </div>
+        <div className="row mr gn btm">
+          <Users users={this.state.users}></Users>
         </div>
       </div>
     );

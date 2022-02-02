@@ -6,7 +6,7 @@ export const Header = () => {
 
         width: '100%',
         padding: '2%',
-        backgroundColor: "yellowgreen",
+        backgroundColor: "yellow",
         color: 'black',
         textAlign: 'center'
     }
