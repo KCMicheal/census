@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.css';
 import { Header } from './components/Header'
+import { Users } from './components/Users'
 import CreateUser from './components/CreateUser'
-import { DisplayBoard } from './components/DisplayBoard';
-import { Users } from './components/Users';
+import { DisplayBoard } from './components/DisplayBoard'
 import { getAllUsers, createUser } from './services/UserService'
 
 class App extends Component {
@@ -23,6 +23,14 @@ class App extends Component {
     });
   } 
 
+  getAllUsers = () => {
+    getAllUsers()
+      .then(users => {
+        console.log(users)
+        this.setState({users: users, numberOfUsers: users.length})
+      });
+  }
+
   onChangeForm = (e) => {
     let user = this.state.user
     if (e.target.name === 'firstname') {
@@ -40,7 +48,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <div className="container mr gn btm">
+        <div className="container mrgnbtm">
           <div className="row">
             <div className="col-md-8">
                 <CreateUser
@@ -58,7 +66,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="row mr gn btm">
+        <div className="row mrgnbtm">
           <Users users={this.state.users}></Users>
         </div>
       </div>

@@ -5,7 +5,7 @@ export const Header = () => {
     const headerStyle = {
 
         width: '100%',
-        padding: '2%',
+        padding: '1%',
         backgroundColor: "yellow",
         color: 'black',
         textAlign: 'center'
