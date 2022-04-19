@@ -23,7 +23,7 @@ class App extends Component {
     });
   } 
 
-  getAllUsers = () => {
+  bringAllUsers = () => {
     getAllUsers()
       .then(users => {
         console.log(users)
@@ -60,7 +60,7 @@ class App extends Component {
             <div className="col-md-4">
                 <DisplayBoard
                   numberOfUsers={this.state.numberOfUsers}
-                  getAllUsers={this.getAllUsers}
+                  getAllUsers={this.bringAllUsers}
                 >
                 </DisplayBoard>
             </div>

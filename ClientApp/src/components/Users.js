@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Users = ({users}) => {
 
-    console.log('users length:::', users.length)
+    console.log('users length::', users.length)
     if (users.length === 0) return null
 
     const UserRow = (user,index) => {
@@ -26,8 +26,8 @@ export const Users = ({users}) => {
                 <thead>
                 <tr>
                     <th>User Id</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
                     <th>Email</th>
                 </tr>
                 </thead>
